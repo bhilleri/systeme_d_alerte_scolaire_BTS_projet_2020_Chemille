@@ -1,5 +1,12 @@
 var infos;
 
+/*
+liste des champs de la page
+    #login
+    #password
+    #se_connecter
+*/
+
 
 function validation_connection()
 {
@@ -18,13 +25,22 @@ function validation_connection()
         },
     })
 }
-};
 
-/*$(document).ready(function(){
-    $("#login").innerHTML = "blablabla";
-    window.location = "index.php?sous_controleur=liste_des_alertes";
+
+$('form').keypress(function(e){
+    if( e.which == 13 ){
+        window.location = "index.php?sous_controleur=liste_des_alertes";
+    }
+});
+
+$(document).ready(function(){
+    $("#login").focus(),
+    $("#se_connecter").click(function(){
+        alert(5*3);
+    })
+
     //initialisation()
-});*/
+});
 /*
 function initialisation(){
     $("#login").focus(),

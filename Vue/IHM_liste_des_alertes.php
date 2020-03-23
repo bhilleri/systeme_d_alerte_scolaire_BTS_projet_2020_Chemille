@@ -5,7 +5,7 @@ require_once "template3.php";
 class IHM_liste_des_alertes
 { 
     private $template;
-    private $title;
+
     
 	public function __construct($title)
 	{

@@ -3,6 +3,7 @@
 require_once "template3.php";
 require_once "vue/IHM_entete.php";
 require_once "vue/IHM_menu.php";
+require_once "vue/IHM_fin.php";
 
 class IHM_login
 { 
@@ -22,7 +23,7 @@ class IHM_login
 		
 		$fichiers_JS = array("js/login.js");
 
-		$entete = new IHM_entete($this->template);
+		$entete = new IHM_entete();
 
 		$entete->generer_entete($title, $fichiers_CSS, $fichiers_JS);
 
@@ -33,6 +34,10 @@ class IHM_login
 		$this->template->set_filenames(array('login' => 'tpl/login.tpl.html'));
 
 		$this->template->display('login');
+
+		//$fin = new IHM_fin();
+		//$fin->generer_fin();
+
 
 	}
 }

@@ -1,9 +1,7 @@
 <?php
-require_once "vue/IHM_login.php";
-require_once "vue/IHM_accueil.php";
-require_once "vue/IHM_liste_des_alertes.php";
 require_once "sous_controleur_login.php";
 require_once "sous_controleur_accueil.php";
+require_once "sous_controleur_exercice.php";
 
 class Controleur
 {
@@ -31,14 +29,15 @@ class Controleur
 					$sous_controleur->dispatcheur();
 				break;
 
-				case "liste_des_alertes":
-					$ihm = new IHM_liste_des_alertes("");
-					$ihm->generer_liste_des_alertes();
-				break;
+				case "exercice": 
+					$sous_controleur = new Sous_controleur_exercice($this->parametres);
+					$sous_controleur -> dispatcheur();
+              	break;
 
 				case "accueil":
 					$sous_controleur = new Sous_controleur_accueil($parametres);
 					$sous_controleur->dispatcheur();
+				break;
 			}
 	}
 }
