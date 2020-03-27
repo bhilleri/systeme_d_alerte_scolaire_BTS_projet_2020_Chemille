@@ -2,6 +2,7 @@
 require_once "sous_controleur_login.php";
 require_once "sous_controleur_accueil.php";
 require_once "sous_controleur_exercice.php";
+require_once "sous_controleur_gestion_du_compte.php";
 
 class Controleur
 {
@@ -38,6 +39,10 @@ class Controleur
 					$sous_controleur = new Sous_controleur_accueil($this->parametres);
 					$sous_controleur->dispatcheur();
 				break;
+
+				case "gestion_du_compte":
+					$sous_controleur = new Sous_controleur_gestion_de_compte($this->parametres);
+					$sous_controleur->dispatcheur();
 			}
 	}
 }

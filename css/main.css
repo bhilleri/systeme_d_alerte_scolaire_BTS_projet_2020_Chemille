@@ -3039,7 +3039,7 @@
 /* Banner */
 
 	#banner {
-		padding: 16em 0 12em 0;
+		padding: 1% 0 1% 0;  /*avant : 16em 0 0 12em */
 		/* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 		background-size: cover;
 		background-position: center top;
