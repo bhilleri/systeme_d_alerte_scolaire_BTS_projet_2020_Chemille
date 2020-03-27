@@ -1,5 +1,17 @@
-.secteur
+.secteur_gestion_du_compte
 {
     padding: 1% 2% 1% 2%;
-    
+
+}
+
+.secteur_gestion_du_compte h2
+{
+    margin-left: 1%;
+    text-align: left;
+}
+
+.secteur_gestion_du_compte p
+{
+    margin-left: 5%;
+    text-align: left;
 }
