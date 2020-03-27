@@ -25,7 +25,7 @@ class Controleur
 			{		
 			
 				case "login" :
-					$sous_controleur = new Sous_controleur_login($parametres);
+					$sous_controleur = new Sous_controleur_login($this->parametres);
 					$sous_controleur->dispatcheur();
 				break;
 
@@ -35,7 +35,7 @@ class Controleur
               	break;
 
 				case "accueil":
-					$sous_controleur = new Sous_controleur_accueil($parametres);
+					$sous_controleur = new Sous_controleur_accueil($this->parametres);
 					$sous_controleur->dispatcheur();
 				break;
 			}

@@ -1,5 +1,6 @@
 <?php
 require_once "vue/IHM_login.php";
+require_once "vue/IHM_accueil.php";
 
 
 class Sous_controleur_accueil

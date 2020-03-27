@@ -19,7 +19,7 @@ class IHM_login
 
 	public function generer_login($title)
 	{
-		$fichiers_CSS = array("css/main.css");
+		$fichiers_CSS = array("css/connexion.css", "css/main.css");
 		
 		$fichiers_JS = array("js/login.js");
 
@@ -35,8 +35,8 @@ class IHM_login
 
 		$this->template->display('login');
 
-		//$fin = new IHM_fin();
-		//$fin->generer_fin();
+		$fin = new IHM_fin();
+		$fin->generer_fin();
 
 
 	}

@@ -1,29 +1,57 @@
 
-
+			<div id="accueil"></div>
 
 				<section id="banner">
-				<div class="content">
-					<p>Bienvenue sur le site web de la gestion du SAS  </p>
-					<h1 id ="titr1">Connexion</h1>
 
-					<ul class="actions">
-					</ul>
-				</div>
-			      
-				<form>
-					<div>
-					<label for="uname"><b>nom d'utilisateur</b></label>
+					<div class="content">
+						<p>Bienvenue sur le site web de la gestion du SAS  </p>
+						<h1 id ="titr1">Connexion</h1>
+
+						<ul class="actions">
+						</ul>
+					</div>
 					
-					<input type="text" placeholder="Entrer le nom d'utilisateur" name="uname" required id="login" class="fadeIn second">
-					</div>
+
+					<!--<form action="connexion.php" method="post">-->
 					<div>
-					<label for="psw"><b>mot de passe</b></label>
-					<input type="password" placeholder="Entrer le mot de passe" name="psw" required id="password" class="fadeIn third">
-						</div>
 						<div>
-					<button type="submit" id="se_connecter" class="button scrolly" value="Se connecter">se connecter</button>
+							<div id="div_message_d_erreur_connexion" class="div_message_d_erreur">
+								<p id="message_d_erreur_connexion"class="message_d_erreur">Ceci est un message d'erreur liés à la connexion</p>
+							</div>
+							<div id="div_login" class="div_connexion">
+
+								<label for="uname"><b>nom d'utilisateur</b></label>
+										<div id="div_message_d_erreur_login" class="div_message_d_erreur">
+											<p id="message_d_erreur_login"class="message_d_erreur">Ceci est un message d'erreur liés à la connexion</p>
+										</div>
+								<input type="text" placeholder="Entrer le nom d'utilisateur" name="uname" required id="login" class="fadeIn second">
+
+
+							</div>
+
+							<div id="div_password" class="div_connexion">
+
+								<label for="psw"><b>mot de passe</b></label>
+										<div id="div_message_d_erreur_password" class="div_message_d_erreur">
+											<p id="message_d_erreur_password"class="message_d_erreur">Ceci est un message d'erreur liés à la connexion</p>
+										</div>
+								<input type="password" placeholder="Entrer le mot de passe" name="psw" required id="password" class="fadeIn third">
+
+
+							</div>
+
+							<div id="div=submit" class="div_connexion">
+								<button type="submit" id="se_connecter" class="button scrolly" value="Se connecter">se connecter</button>
+							</div>
+						</div>
 					</div>
-				</form>
+				</div>
+
+				
+				<!--</form>-->
+
+
+
 					<!--
 	  <input type="text" id="login" class="fadeIn second" name="login" placeholder="Identifiant"/>
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="Mot de passe"/>

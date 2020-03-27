@@ -1,0 +1,24 @@
+.div_message_d_erreur
+{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.div_connexion
+{
+    margin: 0;
+    padding: 0;
+}
+
+#banner .div_message_d_erreur .message_d_erreur
+{
+    color : red;
+    margin-bottom: 0;
+
+}
+
+#banner
+{
+    padding : 0;
+}
