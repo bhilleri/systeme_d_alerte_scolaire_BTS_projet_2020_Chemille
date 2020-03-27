@@ -1,0 +1,11 @@
+.secteur
+{
+    border: orange solid;
+    margin: 5%;
+    background-color: rgb(255, 255, 255);
+}
+.secteur h2
+{
+    text-align: left;
+    border-bottom: solid orange;
+}

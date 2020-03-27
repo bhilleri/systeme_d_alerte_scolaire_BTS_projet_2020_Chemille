@@ -90,7 +90,7 @@ function validation_connection()
 function autoriser(reponse) {
     if (reponse.aquitement == 1){
         if(redirection == "ok"){
-            window.location = "index.php?option=accueil";
+            window.location = "index.php?sous_controleur=accueil";
             return true;
         }
     }

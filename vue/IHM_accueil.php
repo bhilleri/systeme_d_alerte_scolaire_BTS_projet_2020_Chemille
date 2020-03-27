@@ -15,7 +15,7 @@ class IHM_accueil
 	public function generer_accueil($title)
 	{
 		
-		$fichiers_CSS = array("css\main.css");		//fichiers css liés à la page
+		$fichiers_CSS = array("css\main.css", "css/accueil.css");		//fichiers css liés à la page
 		
 		$fichiers_JS = array("");					//fichier Java Script liés 
 
@@ -30,7 +30,10 @@ class IHM_accueil
 
 		$this->template->set_filenames(array('accueil' => 'tpl/accueil.tpl.html'));
         
-        $this->template->display('accueil');
+		$this->template->display('accueil');
+		
+		$fin = new IHM_fin();
+		$fin->generer_fin();
 	}
 	
 }

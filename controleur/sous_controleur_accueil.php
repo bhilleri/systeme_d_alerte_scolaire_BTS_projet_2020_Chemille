@@ -26,7 +26,7 @@ class Sous_controleur_accueil
 			
 				case "affichage_accueil" :
 					$ihm = new IHM_accueil();				
-					$ihm->generer_accueil("");
+					$ihm->generer_accueil("accueil");
 					
 				break;
 				case "test":
