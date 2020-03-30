@@ -43,6 +43,8 @@ class Controleur
 				case "gestion_du_compte":
 					$sous_controleur = new Sous_controleur_gestion_de_compte($this->parametres);
 					$sous_controleur->dispatcheur();
+				break;
+				
 			}
 	}
 }

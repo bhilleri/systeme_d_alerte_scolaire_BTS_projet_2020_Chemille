@@ -13,7 +13,7 @@ class Exercice extends BDD{
 	
 
 	public function Liste_exercice(){
-		// FIXME: Remplacer avec mes données
+		// FIXME: Remplacer avec mes donnees
 		$donnees = $this->bdd->prepare('SELECT nomExercice FROM exercice' );	
 		$donnees->execute();
 		

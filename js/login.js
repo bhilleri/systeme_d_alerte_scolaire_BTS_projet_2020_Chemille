@@ -26,19 +26,19 @@ $(document).ready(function(){
 
     $("#login").focus(),
     $("#se_connecter").click(function(){
-        bouton_validé();
+        bouton_valide();
         
     })
     $(document).keyup(function (e){
         if(e.key==="Enter"){
-            bouton_validé();
+            bouton_valide();
         }
     })
 });
 
 
 
-function bouton_validé()
+function bouton_valide()
 {
     if(verification_champs()){
         validation_connection();

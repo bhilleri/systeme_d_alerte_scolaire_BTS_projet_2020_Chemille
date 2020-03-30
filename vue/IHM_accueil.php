@@ -15,9 +15,9 @@ class IHM_accueil
 	public function generer_accueil($title)
 	{
 		
-		$fichiers_CSS = array("css\main.css", "css/accueil.css");		//fichiers css liés à la page
+		$fichiers_CSS = array("css\main.css", "css/accueil.css");		//fichiers css liees à la page
 		
-		$fichiers_JS = array("");					//fichier Java Script liés 
+		$fichiers_JS = array("");					//fichier Java Script lies 
 
 		$entete = new IHM_entete($this->template);
 
