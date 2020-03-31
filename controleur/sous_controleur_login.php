@@ -2,6 +2,7 @@
 require_once "vue/IHM_login.php";
 require_once "vue/IHM_accueil.php";
 require_once "modele/connexion.php";
+require_once "modele/session.php";
 
 
 class Sous_controleur_login
@@ -35,7 +36,17 @@ class Sous_controleur_login
 					$resu = $connexion->verifier($data['login'],$data['password']);
 					$res["aquitement"] = $resu;
 					echo(json_encode($res));
+					if($resu==1)
+					{
+						Session::creer();
+					}
 					break;
+
+					case "deconnexion":
+							Session::detruire();
+							header('Location: index.php?sous_controleur=login&option=page_de_login');
+					break;
+						
 
 
 			}
