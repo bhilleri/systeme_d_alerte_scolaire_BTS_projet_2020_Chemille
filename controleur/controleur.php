@@ -12,7 +12,7 @@ class Controleur
 	public function __construct(&$parametres)
 	{
 		$this->parametres = $parametres;
-		if(Session::miseAjour()==true)
+		if(Session::mise_a_jour()==true)
 		{
 			if(!isset($this->parametres['sous_controleur']))
 			{

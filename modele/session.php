@@ -24,7 +24,7 @@ class Session
 		}
 	}
 
-	public static function miseAJour()
+	public static function mise_a_jour()
 	{
 		$resu = false;
 		
@@ -48,7 +48,7 @@ class Session
 		return $resu;
 	}
 	
-	public static function getSessionLancee()
+	public static function get_session_lancee()
 	{
 		return self::$session_lancee;
 	}
@@ -96,7 +96,7 @@ class Session
 		
 		
 		
-	public static function setDonnee($cle,$donnee)
+	public static function set_donnee($cle,$donnee)
 	{
 		$resu = false;
 		
@@ -113,7 +113,7 @@ class Session
 	}
 		
 		
-	public static function getDonnee($cle)
+	public static function get_donnee($cle)
 	{
 		if(self::$session_lancee == false)
 			self::lancer();
