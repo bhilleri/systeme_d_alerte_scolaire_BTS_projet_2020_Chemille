@@ -21,7 +21,7 @@ class Controleur
 			}
 			else
 			{
-				if(!isset($this->parametres["option"]))
+				if(!isset($this->parametres["sous_controleur"]))
 				{
 					$this->parametres['sous_controleur'] = "accueil";
 					$this->parametres['option']= "affichage_accueil";

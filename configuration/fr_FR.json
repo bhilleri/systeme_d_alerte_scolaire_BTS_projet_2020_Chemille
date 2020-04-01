@@ -1,0 +1,29 @@
+{
+    "processing":     "Traitement en cours...",
+    "search":         "Rechercher :",
+    "lengthMenu":     "Afficher _MENU_ éléments",
+    "info":           "Affichage de l'élément _START_ &agrave; _END_ sur _TOTAL_ éléments",
+    "infoEmpty":      "Aucun élément",
+    "infoFiltered":   "(filtré sur _MAX_ éléments au total)",
+    "infoPostFix":    "",
+    "loadingRecords": "Chargement en cours...",
+    "zeroRecords":    "Aucun élément à afficher",
+    "emptyTable":     "Aucune donnée disponible dans le tableau",
+    "paginate": {
+        "first":      "Premier",
+        "previous":   "Précédent",
+        "next":       "Suivant",
+        "last":       "Dernier"
+    },
+    "aria": {
+        "sortAscending":  ": activer pour trier la colonne par ordre croissant",
+        "sortDescending": ": activer pour trier la colonne par ordre décroissant"
+    },
+	"select": {
+        "rows": {
+            "_": "%d lignes séléctionnées",
+            "0": "Aucune ligne séléctionnée",
+            "1": "1 ligne séléctionnée"
+        } 
+    }
+}

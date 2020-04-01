@@ -21,11 +21,16 @@ class Sous_controleur_exercice
         switch ($this->parametres['option'])	
 		{					
             case "liste_exercice": 
-                $donnee = new Exercice();
-                $resultat = $donnee -> Liste_exercice();
                 $liste = new IHM_exercice();
-                $liste -> generer_exercice("Liste des exercices",$resultat);
+                $liste -> generer_liste_exercice("Liste des exercices");
                 break;
+                
+             case "chargement_liste_exercice":
+                $exercices = new Exercice();
+                $exercices->liste_exercice($this->parametres);
+                break;
+                
+                
 		}
 	}
 }
