@@ -1972,7 +1972,7 @@
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
-	select,
+	/*select,*/
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -2044,8 +2044,8 @@
 
 	input[type="text"],
 	input[type="password"],
-	input[type="email"],
-	select {
+	input[type="email"]
+	/*select*/ {
 		height: 3.5em;
 		line-height: 3.5em;
 	}
@@ -2797,8 +2797,8 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10001;
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
+		/*z-index: 10001;*/
+		box-shadow: 0 0 10px 0 rgba(83, 68, 68, 0.075);
 		text-align: center;
 	}
 
@@ -3039,7 +3039,7 @@
 /* Banner */
 
 	#banner {
-		padding: 1% 0 1% 0;  /*avant : 16em 0 0 12em */
+		padding: 2% 0 1% 0;  /*avant : 16em 0 0 12em */
 		/* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 		background-size: cover;
 		background-position: center top;

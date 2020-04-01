@@ -4,7 +4,7 @@
     #code_pin_montrer
     #code_pinmodifier
 */
-
+var code_PIN;
 
 
 $(document).ready(function(){
