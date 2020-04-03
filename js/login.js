@@ -22,10 +22,12 @@ liste des champs de la page
     .message_d_erreur_connexion
 */
 
-$(document).ready(function(){
 
-    $("#login").focus(),
-    $("#se_connecter").click(function(){
+$(document).ready(function(){               //lance l'action quand la page est chargée
+
+    $("#login").focus(),                    //Met le focus sur le champ login
+    //lance la fonction bouton_valide quand le bouton se_connecter est cliqué ou quand la touche entrée est préssée
+    $("#se_connecter").click(function(){    
         bouton_valide();
         
     })
@@ -38,14 +40,14 @@ $(document).ready(function(){
 
 
 
-function bouton_valide()
+function bouton_valide()        //regroupe les actions liées à l'action de confirmation de la demande
 {
-    if(verification_champs()){
+    if(verification_champs()){      //si les champs sont correctement remplis la demande vas être envoyé au serveur
         validation_connection();
     }
 }
 
-function verification_champs()
+function verification_champs()      //vérifie que les champs sont correctement remplis et indique quand il manque des informations
 {
     $("#div_message_d_erreur_login").css("display", "none");
     $("#div_message_d_erreur_password").css("display", "none");
@@ -65,39 +67,39 @@ function verification_champs()
 
 }
 
-function validation_connection()
+function validation_connection()    //envoit de la demande d'authentification au serveur
 {
+    //place les informations de connexion dans une varibale
     infos = {
         login: $("#login").val(),
         password: $("#password").val()
     };
-
+    //envoit de la variable contenant les informations de connexion vers le serveur
     $.ajax({
         type: 'POST',
         url: 'index.php?sous_controleur=login&option=tentative_de_connexion',
         data: JSON.stringify(infos),
         dataType:'json',
-        success: function(reponse){
+        success: function(reponse){     //en cas de reponse, la reponse est testé pour savoir si l'authentification a été accepté
             resultat_connexion= autoriser(reponse);
         },
-        error: function () {
+        error: function () {        //Si aucune reponse n'est renvoyée, alors le message Erreur serveur apparait
             alert("Erreur serveur");
             resultat_connexion = false;
         },
     });
 }
 
-function autoriser(reponse) {
-    if (reponse.aquitement == 1){
-        if(redirection == "ok"){
-            window.location = "index.php?sous_controleur=accueil";
-            return true;
-        }
+function autoriser(reponse) {       //verifie si l'authentification a été accepté
+    if (reponse.aquitement == true){
+        //si la réponse est valide, la page d'accueil vas s'afficher
+        window.location = "index.php?sous_controleur=accueil";
+
     }
     else{
+        //si la reponse ne valide pas la connexion, alors un message indiquera que le mot de passe ou le login est incorrect
         $("#message_d_erreur_connexion").text("Login ou mot de passe incorect");
         $("#div_message_d_erreur_connexion").css("display", "block");
-        return false;
     }
         
 }
