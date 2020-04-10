@@ -1,0 +1,11 @@
+Pour générer un mot de passe chiffré :
+
+	1 - dans modele/mdp.php : modifier la ligne 8 : "$mdp = password_hash('mot de passe',PASSWORD_DEFAULT);"
+							 en remplaçant mot de passe par votre mot de passe
+	2 - dans controleur/controleur.php : décomenter la ligne 15 : //new ajout_mot_de_passe();
+	
+	3 - lancer le site internet
+
+	4 - Dans la base de donnée supprimer tout autre administrateur
+
+	5 - Recomenter la ligne 8 de /controleur/controleur.php : new ajout_mot_de_passe();

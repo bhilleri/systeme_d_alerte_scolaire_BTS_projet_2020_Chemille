@@ -1,5 +1,4 @@
 <?php
-require_once dirname(dirname(__FILE__))."/modele/bdd.php";
 require_once "modele/bdd.php";
 class ajout_mot_de_passe extends BDD{
     public function __construct(){

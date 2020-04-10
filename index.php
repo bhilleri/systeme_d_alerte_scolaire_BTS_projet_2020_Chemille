@@ -4,5 +4,3 @@
 	$page=new Controleur($_REQUEST);
 	$page->dispatcheur();
 ?>
-
-
