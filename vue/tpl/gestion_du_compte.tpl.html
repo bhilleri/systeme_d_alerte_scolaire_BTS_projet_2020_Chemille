@@ -12,7 +12,7 @@
 						<p>Le code PIN est le code PIN nécessaire pour déclancher une alerte et la stopper</p>
 						<p id="code_PIN">******</p>
 						<button id="code_pin_montrer">Montrer</button>
-						<button id="code_pin_modifier">Modifier</button>
+						<button href="index.php?sous_controleur=gestion_du_compte&option=modifier_code_PIN" id="code_pin_modifier" >Modifier</button>
 					</div>
 
 
@@ -23,6 +23,50 @@
 					</div>
 
 
+
+
+					<!--popup de modification du code PIN-->
+					<div id="dialog_modifier_code_PIN" class="dialog_modifier_code">
+
+						<div id="div_ancien_password" class="div_modifier_code">
+				
+							<label for="hold_psw"><b>Entrer l'ancien mot de passe</b></label>
+									<div id="div_message_d_erreur_ancien_password" class="div_message_d_erreur">
+										<p id="message_d_erreur_ancien_password" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie de l'ancien mot de passe</p>
+									</div>
+							<input type="password" placeholder="Entrer le mot de passe" name="psw" required id="password" class="fadeIn third">
+				
+				
+						</div>
+						<div id="div_code_PIN_1" class="div_modifier_code">
+				
+							<label for="PIN1"><b>Entrer le nouveau code PIN</b></label>
+									<div id="div_message_d_erreur_PIN_1" class="div_message_d_erreur">
+										<p id="message_d_erreur_PIN_1" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du nouveau code PIN</p>
+									</div>
+							<input type="password" placeholder="Entrer le code PIN" name="PIN_1" required id="PIN_1" class="fadeIn third">
+				
+				
+						</div>
+						<div id="div_code_PIN_2" class="div_modifier_code">
+				
+							<label for="PIN2"><b>Réécriver le code PIN</b></label>
+									<div id="div_message_d_erreur_PIN_2" class="div_message_d_erreur">
+										<p id="message_d_erreur_PIN_2" class="message_d_erreur">Ceci est un message d'erreur liés à la deuxième saisie du nouveau code PIN ou à une erreur dans le changement de mot de passe</p>
+									</div>
+							<input type="password" placeholder="Entrer à nouveaux le code PIN" name="PIN_2" required id="PIN_2" class="fadeIn third">
+				
+				
+						</div>
+					</div>
+						<!--Popup d'affichage-->
+						<div id="dialog_erreur" class="dialog_erreur_class">
+								<div id="message">
+									<p>Erreur serveur</p>
+								</div>							
+						</div>
+
+						
 
 				</section>
 

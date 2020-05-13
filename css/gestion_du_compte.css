@@ -21,3 +21,20 @@
     display:none;
     
 }
+
+.dialog_modifier_code h1
+{
+    font-size: 1.5em;
+}
+
+.div_message_d_erreur
+{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+.message_d_erreur
+{
+    color : red;
+    margin-bottom: 0;
+}

@@ -19,9 +19,9 @@ class IHM_gestion_du_compte
 
 	public function generer_login($title)
 	{
-		$fichiers_CSS = array("css/main.css", "css/gestion_du_compte.css");
+		$fichiers_CSS = array("css/main.css", "css/gestion_du_compte.css", "css/jquery-ui.structure.min.css", "css/jquery-ui.theme.min.css");
 		
-		$fichiers_JS = array("js/gestion_du_compte.js");
+		$fichiers_JS = array("js/gestion_du_compte.js", "js/jquery-ui.min.js");
 
 		$entete = new IHM_entete();
 
@@ -29,7 +29,7 @@ class IHM_gestion_du_compte
 
 		$menu = new IHM_menu();
 
-		$menu->generer_menu();		//la page de loggin ne doit afficher que le logo dans le menu
+		$menu->generer_menu();		
 
 		$this->template->set_filenames(array('gestion_du_compte' => 'tpl/gestion_du_compte.tpl.html'));
 

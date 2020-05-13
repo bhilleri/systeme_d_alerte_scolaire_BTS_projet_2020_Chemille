@@ -45,6 +45,7 @@ class Sous_controleur_login
 					if($resu==1)
 					{
 						Session::creer();
+						Session::set_donnee("nom_utilisateur",$data['login']);
 					}
 					break;
 
