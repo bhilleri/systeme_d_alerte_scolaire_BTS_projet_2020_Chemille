@@ -121,6 +121,16 @@ function initialisation_popup(){
                     validation_modification_code_PIN(); 
                 }
             })
+            //lors de la fermeture de la fenêtre les champs doivent être réinitialiser
+            $('#dialog_modifier_code_PIN').on('dialogclose', function(event){
+                $("#div_message_d_erreur_ancien_password").css("display", "none");
+                $("#div_message_d_erreur_PIN_1").css("display", "none");
+                $("#div_message_d_erreur_PIN_2").css("display", "none");
+                $("#PIN_2").val("");
+                $("#PIN_1").val("");
+                $("#password").val("");
+            })
+
         },
     });
 
