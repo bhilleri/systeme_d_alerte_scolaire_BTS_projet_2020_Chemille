@@ -38,3 +38,11 @@
     color : red;
     margin-bottom: 0;
 }
+.div_modifier_code
+{
+    width: 100%;
+}
+
+.validation_message_d_erreur{
+    height: 2em;
+}

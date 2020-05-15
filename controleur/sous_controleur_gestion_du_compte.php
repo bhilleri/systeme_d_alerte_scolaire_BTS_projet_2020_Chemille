@@ -30,7 +30,7 @@ class Sous_controleur_gestion_de_compte
 				case "modifier_code_PIN" :
 					$data = json_decode(file_get_contents('php://input'),true);
 					$action = new Code_PIN();
-					$reponse = $action->modifier($data['password'], $data['nouveau_code_PIN']);
+					$reponse["resultat"] = $action->modifier($data['password'], $data['nouveau_code_PIN']);
 					echo(json_encode($reponse));
 				break;
 				case "visualiser_le_code_PIN":
