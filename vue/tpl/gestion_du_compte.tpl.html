@@ -19,20 +19,58 @@
 					<div class="secteur_gestion_du_compte">
 						<h2>Mot de passe </h2>
 						<p>Le mot de passe est le code nécessaire pour accèder à l'interface d'administration de l'application</p>
-						<p id="mot_de_passe_modifier">Modifier mot de passe</p>
+						<button id="password_modifier">Mofidier mot de passe</button>
 					</div>
 
 
+					<!--popup de modification du mot de passe-->
+					<div id="dialog_modifier_mot_de_passe" class="dialog_modifier_code">
+
+						<div id="div_hold_password" class="div_modifier_code">
+				
+							<label for="hold_psw"><b>Entrer l'ancien mot de passe</b></label>
+									<div id="div_message_d_erreur_hold_password" class="div_message_d_erreur">
+										<p id="message_d_erreur_hold_password" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie de l'ancien mot de passe</p>
+									</div>
+							<input type="password" placeholder="Entrer le mot de passe" name="hold_psw" required id="hold_password" class="fadeIn third">
+				
+				
+						</div>
+						<div id="div_new_password_1" class="div_modifier_code">
+				
+							<label for="new_psw_1"><b>Entrer le nouveau mot de passe</b></label>
+									<div id="div_message_d_erreur_new_password_1" class="div_message_d_erreur">
+										<p id="message_d_erreur_new_password_1" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du nouveau mot de passe</p>
+									</div>
+							<input type="password" placeholder="Entrer le nouveau mot de passe" name="new_psw_1" required id="new_password_1" class="fadeIn third">
+				
+				
+						</div>
+
+						<div id="div_new_password_2" class="div_modifier_code">
+				
+							<label for="new_psw_2"><b>Réécriver le mot de passe</b></label>
+									<div id="div_message_d_erreur_new_password_2" class="div_message_d_erreur">
+										<p id="message_d_erreur_new_password_2" class="message_d_erreur">Ceci est un message d'erreur liés à la resaisie du nouveau mot de passe</p>
+									</div>
+							<input type="password" placeholder="Entrer le nouveau mot de passe" name="new_psw_2" required id="new_password_2" class="fadeIn third">
+				
+				
+						</div>
+
+					</div>
+
+					<!--fin de popup de modification du code PIN-->
 
 
 					<!--popup de modification du code PIN-->
 					<div id="dialog_modifier_code_PIN" class="dialog_modifier_code">
 
-						<div id="div_ancien_password" class="div_modifier_code">
+						<div id="div_password" class="div_modifier_code">
 				
-							<label for="hold_psw"><b>Entrer l'ancien mot de passe</b></label>
-									<div id="div_message_d_erreur_ancien_password" class="div_message_d_erreur">
-										<p id="message_d_erreur_ancien_password" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie de l'ancien mot de passe</p>
+							<label for="hold_psw"><b>Entrer le mot de passe</b></label>
+									<div id="div_message_d_erreur_password" class="div_message_d_erreur">
+										<p id="message_d_erreur_password" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du mot de passe</p>
 									</div>
 							<input type="password" placeholder="Entrer le mot de passe" name="psw" required id="password" class="fadeIn third">
 				
@@ -59,6 +97,7 @@
 				
 						</div>
 					</div>
+					<!--Fin de popup de modification de code PIN-->
 
 					
 					<!--Popup d'affichage-->
