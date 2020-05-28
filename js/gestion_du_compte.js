@@ -31,7 +31,7 @@ $(document).ready(function(){
     })
 
 
-    $('#dialog_erreur').keyup(function (e){ //détécte si la touche entrée a été lance une action
+    $(document).keyup(function (e){ //détécte si la touche entrée a été lance une action
         if(e.key==="Enter"){
 
             if(popup_erreur_ouverte == true)
@@ -40,7 +40,7 @@ $(document).ready(function(){
             }
             else
             {
-                if(nom_popup_ouverte == dialog_modifier_code_PIN)
+                if(nom_popup_ouverte == "dialog_modifier_code_PIN")
                 {
                     validation_modification_code_PIN(); 
                     
@@ -273,6 +273,12 @@ function initialisation_popup(){
 
 };
 
+
+
+
+/**
+ * validation_modification_code_PIN est une fonction
+ */
 function validation_modification_code_PIN(){
     //verification du remplissage des champs
     let champs_correctement_remplit = true;
