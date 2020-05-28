@@ -25,7 +25,10 @@ class code_PIN extends BDD{
 
 
 
-
+    //modifier code PIN est une fonction
+    /**
+     * modifier code PIN est une fonction
+     */
     public function modifier_code_PIN($password, $nouveau_code_PIN){ 
 
         /* $nom contient le nom d'utilisateur entré dans le champ loggin
@@ -33,22 +36,30 @@ class code_PIN extends BDD{
         $this->bdd->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
         $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $verification_du_mot_de_passe = new Connexion();
-        if($verification_du_mot_de_passe->verifier(Session::get_donnee("nom_utilisateur"), $password))
+
+        $expression_reguliere_est_un_nombre = '/^\d+$/m';
+
+        if(preg_match_all($expression_reguliere_est_un_nombre, $nouveau_code_PIN, $nouveau_code_PIN, PREG_SET_ORDER, 0) ===1 )
         {
-            $modification_code_PIN = $this->bdd->prepare('update codePin set codePin = :code');
-            $modification_code_PIN->bindValue(":code",strtolower($nouveau_code_PIN));	
-            $modification_code_PIN->execute();
-            $modification_code_PIN->closeCursor();
+            if($verification_du_mot_de_passe->verifier(Session::get_donnee("nom_utilisateur"), $password))
+            {
+                $modification_code_PIN = $this->bdd->prepare('update codePin set codePin = :code');
+                $modification_code_PIN->bindValue(":code",strtolower($nouveau_code_PIN));	
+                $modification_code_PIN->execute();
+                $modification_code_PIN->closeCursor();
 
 
-            return true;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        
         else
         {
-            return false;
+            return -1;
         }
-        
-}
+    }
 }
 ?>
