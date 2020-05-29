@@ -32,7 +32,7 @@ class Sous_controleur_gestion_de_compte
 				case "modifier_mot_de_passe" :
 					$data = json_decode(file_get_contents('php://input'),true);
 					$action = new Mot_de_passe();
-					$reponse["resultat"] = $action->modifier_mot_de_passe($data['hold_password'], $data['new_password']);
+					$reponse["resultat"] = $action->modifier_mot_de_passe($data['old_password'], $data['new_password']);
 					echo(json_encode($reponse));
 				break;
 

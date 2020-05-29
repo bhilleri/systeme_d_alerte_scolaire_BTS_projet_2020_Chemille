@@ -27,7 +27,7 @@ Les fonctionnalités que je dois mettre en place sont :
     
 
 
-Le fonctionnement du site nécessite d'avoir accès à la base de données 
+Le fonctionnement du site nécessite d'avoir accès à la base de données. Pour le moment la base de donnée n'est pas divulguée sur Github
 
 
 Dans le dossier configuration, il faut créer le fichier conf.php et y placer ces éléments :

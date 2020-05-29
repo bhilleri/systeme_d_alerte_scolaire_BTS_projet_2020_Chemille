@@ -214,12 +214,12 @@ function initialisation_popup(){
             
             //lors de la fermeture de la fenêtre les champs doivent être réinitialiser
             $('#dialog_modifier_mot_de_passe').on('dialogclose', function(event){
-                $("#div_message_d_erreur_hold_password").css("display", "none");
+                $("#div_message_d_erreur_old_password").css("display", "none");
                 $("#div_message_d_erreur_new_password_1").css("display", "none");
                 $("#div_message_d_erreur_new_password_2").css("display", "none");
                 $("#new_password_1").val("");
                 $("#new_password_2").val("");
-                $("#hold_password").val("");
+                $("#old_password").val("");
             })
 
         },
@@ -433,15 +433,15 @@ function validation_modification_code_PIN(){
 
 
 /*              
-                $("#hold_password")
+                $("#old_password")
                 $("#new_password_1")
                 $("#new_password_2")
                 
-                $("#div_message_d_erreur_hold_password")
+                $("#div_message_d_erreur_old_password")
                 $("#div_message_d_erreur_new_password_1")
                 $("#div_message_d_erreur_new_password_2")
 
-                $("message_d_erreur_hold_password")
+                $("message_d_erreur_old_password")
                 $("message_d_erreur_new_password_1")
                 $("message_d_erreur_new_password_2")
 
@@ -453,7 +453,7 @@ function validation_modification_mot_de_passe(){
     //verification du remplissage des champs
     let champs_correctement_remplit = true;
     //Retrait des précédent messages d'erreurs
-    $("#div_message_d_erreur_hold_password").css("display", "none");
+    $("#div_message_d_erreur_old_password").css("display", "none");
     $("#div_message_d_erreur_new_password_1").css("display", "none");
     $("#div_message_d_erreur_new_password_2").css("display", "none");
 
@@ -527,12 +527,12 @@ function validation_modification_mot_de_passe(){
 
     }
     //vérification du remplissage du mot de passe
-    if($("#hold_password").val()=="")
+    if($("#old_password").val()=="")
     {
         champs_correctement_remplit = false;
-        $("#message_d_erreur_hold_password").text("Mot de passe non saisie");
-        $("#div_message_d_erreur_hold_password").css("display", "block");
-        $("#hold_password").focus();
+        $("#message_d_erreur_old_password").text("Mot de passe non saisie");
+        $("#div_message_d_erreur_old_password").css("display", "block");
+        $("#old_password").focus();
     }
 
 
@@ -541,7 +541,7 @@ function validation_modification_mot_de_passe(){
     {
         //on renseigne dans une variable le mot de passe et le code PIN
         infos = {
-            hold_password : $("#hold_password").val(),
+            old_password : $("#old_password").val(),
             new_password : $("#new_password_1").val(),
         };
         //la requète est envoyé et on attend une réponse pour savoir si le mot de passe a bien été changé
@@ -559,10 +559,10 @@ function validation_modification_mot_de_passe(){
                 else
                 {
                     //si la modification échoue, alors l'erreur mot de passe incoret s'affiche
-                    $("#message_d_erreur_hold_password").text("Mot de passe incorect");
-                    $("#div_message_d_erreur_hold_password").css("display", "block");
-                    $("#hold_password").val("");
-                    $("#hold_password").focus();
+                    $("#message_d_erreur_old_password").text("Mot de passe incorect");
+                    $("#div_message_d_erreur_old_password").css("display", "block");
+                    $("#old_password").val("");
+                    $("#old_password").focus();
                 }
             },
             error: function () {        //Si aucune reponse n'est renvoyée, alors le message Erreur serveur apparait
