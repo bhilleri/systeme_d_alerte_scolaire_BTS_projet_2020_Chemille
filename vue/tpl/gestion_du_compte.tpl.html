@@ -32,7 +32,7 @@
 									<div id="div_message_d_erreur_old_password" class="div_message_d_erreur">
 										<p id="message_d_erreur_old_password" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie de l'ancien mot de passe</p>
 									</div>
-							<input type="password" placeholder="Entrer le mot de passe" name="old_psw" required id="old_password" class="fadeIn third">
+							<input type="password" placeholder="Entrer l'ancien mot de passe de passe" name="old_psw" required id="old_password" class="fadeIn third" title="Entrer l'ancien mot de passe de passe">
 				
 				
 						</div>
@@ -42,7 +42,7 @@
 									<div id="div_message_d_erreur_new_password_1" class="div_message_d_erreur">
 										<p id="message_d_erreur_new_password_1" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du nouveau mot de passe</p>
 									</div>
-							<input type="password" placeholder="Entrer le nouveau mot de passe" name="new_psw_1" required id="new_password_1" class="fadeIn third">
+							<input type="password" placeholder="Entrer le nouveau mot de passe" name="new_psw_1" required id="new_password_1" class="fadeIn third" title="Entrer le nouveau mot de passe">
 				
 				
 						</div>
@@ -53,14 +53,14 @@
 									<div id="div_message_d_erreur_new_password_2" class="div_message_d_erreur">
 										<p id="message_d_erreur_new_password_2" class="message_d_erreur">Ceci est un message d'erreur liés à la resaisie du nouveau mot de passe</p>
 									</div>
-							<input type="password" placeholder="Entrer le nouveau mot de passe" name="new_psw_2" required id="new_password_2" class="fadeIn third">
+							<input type="password" placeholder="Entrer le nouveau mot de passe" name="new_psw_2" required id="new_password_2" class="fadeIn third" step="number" title="Entre le nouveau mot de passe">
 				
 				
 						</div>
 
 					</div>
 
-					<!--fin de popup de modification du code PIN-->
+					<!--fin de popup de modification du mot de passe-->
 
 
 					<!--popup de modification du code PIN-->
@@ -72,7 +72,7 @@
 									<div id="div_message_d_erreur_password" class="div_message_d_erreur">
 										<p id="message_d_erreur_password" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du mot de passe</p>
 									</div>
-							<input type="password" placeholder="Entrer le mot de passe" name="psw" required id="password" class="fadeIn third">
+							<input type="password" placeholder="Entrer le mot de passe" name="psw" required id="password" class="fadeIn third" title="Entrer le mot de passe">
 				
 				
 						</div>
@@ -82,7 +82,7 @@
 									<div id="div_message_d_erreur_PIN_1" class="div_message_d_erreur">
 										<p id="message_d_erreur_PIN_1" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du nouveau code PIN</p>
 									</div>
-							<input type="password" placeholder="Entrer le code PIN" name="PIN_1" required id="PIN_1" class="fadeIn third">
+							<input type="password" placeholder="Entrer un code PIN composé de 4 chiffres" name="PIN_1" required id="PIN_1" class="fadeIn third" maxlength="4" pattern="/^\d{4}$/gm" step="number" title="Entrer un code PIN composé de 4 chiffres" >
 				
 				
 						</div>
@@ -92,7 +92,7 @@
 									<div id="div_message_d_erreur_PIN_2" class="div_message_d_erreur">
 										<p id="message_d_erreur_PIN_2" class="message_d_erreur">Ceci est un message d'erreur liés à la deuxième saisie du nouveau code PIN ou à une erreur dans le changement de mot de passe</p>
 									</div>
-							<input type="password" placeholder="Entrer à nouveaux le code PIN" name="PIN_2" required id="PIN_2" class="fadeIn third">
+							<input type="password" placeholder="Entrer à nouveau le code PIN composé de 4 chiffres" name="PIN_2" required id="PIN_2" class="fadeIn third" maxlength="4" pattern="/^\d{4}$/gm" title="Entrer à nouveau le code PIN composé de 4 chiffres">
 				
 				
 						</div>
