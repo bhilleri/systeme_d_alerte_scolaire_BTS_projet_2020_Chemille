@@ -5,7 +5,7 @@ require_once "sous_controleur_exercice.php";
 require_once "sous_controleur_gestion_du_compte.php";
 require_once "sous_controleur_categorie_d_alerte.php";
 require_once "modele/session.php";
-require_once "modele/mdp.php";
+require_once "modele/ajout_mot_de_passe.php";
 
 class Controleur
 {

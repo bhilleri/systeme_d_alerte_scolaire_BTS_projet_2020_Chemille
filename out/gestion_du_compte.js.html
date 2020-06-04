@@ -1,4 +1,32 @@
-import {gestion_champs_input} from "./gestion_champs_input.js";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: gestion_du_compte.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: gestion_du_compte.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {gestion_champs_input} from "./gestion_champs_input.js";
 
 /**Variable contenant le code PIN, définis à "null" quand le code PIN n'est pas connue */
 let code_PIN = null;
@@ -264,7 +292,7 @@ function afficher_code_PIN(){
             //Si la variable code_PIN est à null alors elle n'a pas été définit et il faut envoyer une requète au serveur pour l'obtenir
             $.ajax({
                 type: 'POST',
-                url: 'index.php?sous_controleur=gestion_du_compte&option=visualiser_le_code_PIN',
+                url: 'index.php?sous_controleur=gestion_du_compte&amp;option=visualiser_le_code_PIN',
                 dataType:'json',
                 success: function(reponse){
                     //on place la réponse dans la varaible code PIN
@@ -324,7 +352,7 @@ function verifier_champs_nouveau_code_PIN()
         }
         
 
-        if (!EXPRESSION_REGULIRERE_VERIFICATION_CODE_PIN.test(champs_modifier_code_PIN.code2.get_input()) && champs_modifier_code_PIN.code2.get_input() !== "")
+        if (!EXPRESSION_REGULIRERE_VERIFICATION_CODE_PIN.test(champs_modifier_code_PIN.code2.get_input()) &amp;&amp; champs_modifier_code_PIN.code2.get_input() !== "")
         {
             champs_modifier_code_PIN.code2.afficher_erreur("Le code PIN doit avoir 4 chiffres")
             champs_modifier_code_PIN.code2.vider_input();
@@ -362,7 +390,7 @@ function verifier_champs_nouveau_mot_de_passe()
         }
 
 
-        if (!EXPRESSION_REGULIRERE_VERIFICATION_PASSWORD.test(champs_modifier_password.new_password2.get_input()) && champs_modifier_password.new_password2.get_input() !== "")
+        if (!EXPRESSION_REGULIRERE_VERIFICATION_PASSWORD.test(champs_modifier_password.new_password2.get_input()) &amp;&amp; champs_modifier_password.new_password2.get_input() !== "")
         {
             champs_modifier_password.new_password2.afficher_erreur("Le mot de passe doit avoir au minimum 8 caractères");
             champs_modifier_password.new_password2.vider_input();
@@ -392,7 +420,7 @@ function validation_modification_code_PIN(){
         password : verifier_champs_mot_de_passe(champs_modifier_code_PIN.password),        
     };
 
-    if (resultat_verification.password && resultat_verification.code_PIN)
+    if (resultat_verification.password &amp;&amp; resultat_verification.code_PIN)
     {
         let infos = {
             password : $("#password").val(),
@@ -401,7 +429,7 @@ function validation_modification_code_PIN(){
         //la requète est envoyé et on attend une réponse pour savoir si le mot de passe a bien été changé
         $.ajax({
             type: 'POST',
-            url: 'index.php?sous_controleur=gestion_du_compte&option=modifier_code_PIN',
+            url: 'index.php?sous_controleur=gestion_du_compte&amp;option=modifier_code_PIN',
             data: JSON.stringify(infos),
             dataType:'json',
             success: function(reponse){     //en cas de reponse, la reponse est testé pour savoir si l'authentification a été accepté   
@@ -435,7 +463,7 @@ function validation_modification_password()
         new_password : verifier_champs_nouveau_mot_de_passe(),
         old_password : verifier_champs_mot_de_passe(champs_modifier_password.old_password),        
     };
-    if(resultat_verification.old_password && resultat_verification.new_password)
+    if(resultat_verification.old_password &amp;&amp; resultat_verification.new_password)
     {
         /**on renseigne dans une variable l'ancien mot de passe et le nouveau*/
         let infos = {
@@ -445,7 +473,7 @@ function validation_modification_password()
         //la requète est envoyé et on attend une réponse pour savoir si le mot de passe a bien été changé
         $.ajax({
             type: 'POST',
-            url: 'index.php?sous_controleur=gestion_du_compte&option=modifier_mot_de_passe',
+            url: 'index.php?sous_controleur=gestion_du_compte&amp;option=modifier_mot_de_passe',
             data: JSON.stringify(infos),
             dataType:'json',
             success: function(reponse){     //en cas de reponse, la reponse est testé pour savoir si l'authentification a été accepté   
@@ -463,4 +491,26 @@ function validation_modification_password()
             },
         });
     }
-}
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#afficher_code_PIN">afficher_code_PIN</a></li><li><a href="global.html#champs_modifier_code_PIN">champs_modifier_code_PIN</a></li><li><a href="global.html#champs_modifier_password">champs_modifier_password</a></li><li><a href="global.html#code_PIN">code_PIN</a></li><li><a href="global.html#dialog_erreur">dialog_erreur</a></li><li><a href="global.html#dialog_modifier_code_PIN">dialog_modifier_code_PIN</a></li><li><a href="global.html#dialog_modifier_mot_de_passe">dialog_modifier_mot_de_passe</a></li><li><a href="global.html#ENUMERATION_NOMS_DES_BOITES_DE_DIALOGUE">ENUMERATION_NOMS_DES_BOITES_DE_DIALOGUE</a></li><li><a href="global.html#nom_popup_ouverte">nom_popup_ouverte</a></li><li><a href="global.html#NOMBRE_DE_CHARACTERE_CODE_PIN">NOMBRE_DE_CHARACTERE_CODE_PIN</a></li><li><a href="global.html#NOMBRE_MIN_DE_CHARACTERE_MOT_DE_PASSE">NOMBRE_MIN_DE_CHARACTERE_MOT_DE_PASSE</a></li><li><a href="global.html#popup_erreur_ouverte">popup_erreur_ouverte</a></li><li><a href="global.html#verifier_champs_mot_de_passe">verifier_champs_mot_de_passe</a></li><li><a href="global.html#vider_champ_input_modifier_code_PIN">vider_champ_input_modifier_code_PIN</a></li><li><a href="global.html#vider_champs_erreur_modifier_code_PIN">vider_champs_erreur_modifier_code_PIN</a></li><li><a href="global.html#vider_champs_erreur_modifier_password">vider_champs_erreur_modifier_password</a></li><li><a href="global.html#vider_champs_input_modifier_password">vider_champs_input_modifier_password</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Jun 04 2020 12:36:04 GMT+0200 (GMT+02:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

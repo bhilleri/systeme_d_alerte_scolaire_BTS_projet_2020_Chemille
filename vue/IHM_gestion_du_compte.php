@@ -21,11 +21,13 @@ class IHM_gestion_du_compte
 	{
 		$fichiers_CSS = array("css/main.css", "css/gestion_du_compte.css", "css/jquery-ui.structure.min.css", "css/jquery-ui.theme.min.css");
 		
-		$fichiers_JS = array("js/gestion_du_compte.js", "js/jquery-ui.min.js");
+		$fichiers_JS = array( "js/jquery-ui.min.js");
+
+		$fichier_MODULE = array("js/gestion_du_compte.js");
 
 		$entete = new IHM_entete();
 
-		$entete->generer_entete($title, $fichiers_CSS, $fichiers_JS);
+		$entete->generer_entete($title, $fichiers_CSS, $fichiers_JS, $fichier_MODULE);
 
 		$menu = new IHM_menu();
 

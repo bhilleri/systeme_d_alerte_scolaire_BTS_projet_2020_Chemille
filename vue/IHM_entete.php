@@ -11,7 +11,7 @@ class IHM_entete
 
 	}
  			
-	public function generer_entete($titre, $CSS=[],$JS=[] )
+	public function generer_entete($titre, $CSS=[],$JS=[], $MODULE=[] )
 	{
 		$this->template->set_filenames(array('entete' => 'tpl/entete.tpl.html'));
 		$this->template->assign_var('TITRE',$titre);		
@@ -24,7 +24,12 @@ class IHM_entete
 		foreach($JS as $infos)
 		{ 	 	
 			$this->template->assign_block_vars('js', array('FICHIER' => $infos));
-		}			
+		}
+		
+		foreach($MODULE as $infos)
+		{ 	 	
+			$this->template->assign_block_vars('module', array('FICHIER' => $infos));
+		}	
 		
 		
 		$this->template->display('entete');	

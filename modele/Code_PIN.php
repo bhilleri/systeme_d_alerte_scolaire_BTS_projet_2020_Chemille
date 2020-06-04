@@ -39,12 +39,12 @@ class code_PIN extends BDD{
 
         $expression_reguliere_est_un_nombre = '/^\d+$/m';
 
-        if(preg_match_all($expression_reguliere_est_un_nombre, $nouveau_code_PIN, $nouveau_code_PIN, PREG_SET_ORDER, 0) ===1 )
+        if(preg_match_all($expression_reguliere_est_un_nombre, $nouveau_code_PIN, $buffer, PREG_SET_ORDER, 0) ===1 )
         {
             if($verification_du_mot_de_passe->verifier(Session::get_donnee("nom_utilisateur"), $password))
             {
                 $modification_code_PIN = $this->bdd->prepare('update codePin set codePin = :code');
-                $modification_code_PIN->bindValue(":code",strtolower($nouveau_code_PIN));	
+                $modification_code_PIN->bindValue(":code",$nouveau_code_PIN);	
                 $modification_code_PIN->execute();
                 $modification_code_PIN->closeCursor();
 
