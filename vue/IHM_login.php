@@ -21,11 +21,13 @@ class IHM_login
 	{
 		$fichiers_CSS = array("css/login.css", "css/main.css");
 		
-		$fichiers_JS = array("js/login.js");
+		$fichiers_JS = array("");
+
+		$fichier_MODULE = array("js/login.js");
 
 		$entete = new IHM_entete();
 
-		$entete->generer_entete($title, $fichiers_CSS, $fichiers_JS);
+		$entete->generer_entete($title, $fichiers_CSS, $fichiers_JS,  $fichier_MODULE);
 
 		$menu = new IHM_menu();
 

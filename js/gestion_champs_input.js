@@ -56,4 +56,9 @@ export class gestion_champs_input
         this.texte_erreur.text("");
         this.div_erreur.css("display", "none");
     }
+
+    focus()
+    {
+        this.input.focus();
+    }
 };

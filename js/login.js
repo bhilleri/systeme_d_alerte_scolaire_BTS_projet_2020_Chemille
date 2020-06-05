@@ -1,6 +1,12 @@
-var infos;
-var resultat_connexion;
-var redirection = "ok";
+import {gestion_champs_input} from "./gestion_champs_input.js";
+
+
+
+
+
+let infos;
+let resultat_connexion;
+let redirection = "ok";
 
 
 /*
@@ -23,9 +29,21 @@ liste des champs de la page
 */
 
 
+let champs_de_connexion = {
+    login : new gestion_champs_input($("#login"),$("#message_d_erreur_login"), $("#div_message_d_erreur_login")),
+    password : new gestion_champs_input($("#password"), $("#message_d_erreur_password"), $("#div_message_d_erreur_password"))
+};
+
+function vider_erreur_connexion()
+{
+    champs_de_connexion.login.masquer_erreur();
+    champs_de_connexion.password.masquer_erreur();
+}
+
+
 $(document).ready(function(){               //lance l'action quand la page est chargée
 
-    $("#login").focus(),                    //Met le focus sur le champ login
+    champs_de_connexion.login.focus();                 //Met le focus sur le champ login
     //lance la fonction bouton_valide quand le bouton se_connecter est cliqué ou quand la touche entrée est préssée
     $("#se_connecter").click(function(){    
         bouton_valide();
@@ -49,30 +67,25 @@ function bouton_valide()        //regroupe les actions liées à l'action de con
 
 function verification_champs()      //vérifie que les champs sont correctement remplis et indique quand il manque des informations
 {
-    $("#div_message_d_erreur_login").css("display", "none");
-    $("#div_message_d_erreur_password").css("display", "none");
-    $("#div_message_d_erreur_connexion").css("display", "none");
-    if($("#login").val() == ""){
-        $("#login").focus();
-        $("#message_d_erreur_login").text("Nom d'utilisateur non saisie");
-        $("#div_message_d_erreur_login").css("display", "block");
+    vider_erreur_connexion()
+    if(champs_de_connexion.login.get_input() == ""){
+        champs_de_connexion.login.afficher_erreur_et_focus("nom d'utilisateur non saisi")
         return false;
-    } else if ($("#password").val() == "") {
-        $("#password").focus();
-        $("#message_d_erreur_password").text("Mot de passe non saisie");
-        $("#div_message_d_erreur_password").css("display", "block");
+    } else if (champs_de_connexion.password.get_input() == "") {
+        champs_de_connexion.password.afficher_erreur_et_focus("Mot de passe non saisie");
         return false;
     }
     return true;
 
+    
 }
 
 function validation_connection()    //envoit de la demande d'authentification au serveur
 {
     //place les informations de connexion dans une varibale
     infos = {
-        login: $("#login").val(),
-        password: $("#password").val()
+        login: champs_de_connexion.login.get_input(),
+        password: champs_de_connexion.password.get_input(),
     };
     //envoit de la variable contenant les informations de connexion vers le serveur
     $.ajax({
@@ -98,8 +111,9 @@ function autoriser(reponse) {       //verifie si l'authentification a été acce
     }
     else{
         //si la reponse ne valide pas la connexion, alors un message indiquera que le mot de passe ou le login est incorrect
-        $("#message_d_erreur_connexion").text("Login ou mot de passe incorect");
-        $("#div_message_d_erreur_connexion").css("display", "block");
+        champs_de_connexion.login.afficher_erreur_et_focus("Login ou mot de passe incorect");
+        champs_de_connexion.password.vider_input();
     }
+    
         
 }
