@@ -1,0 +1,41 @@
+/*Ce fichier contient la configuration css qui s'applique à l'ensemble du projet et qui a été rejouté aprés l'insertion du template contenu dans main.css */
+
+
+.popup
+{
+    display:none;
+    
+}
+
+.div_message_d_erreur
+{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+.message_d_erreur
+{
+    color : red;
+    margin-bottom: 0;
+}
+.div_modifier_code
+{
+    width: 100%;
+}
+
+.validation_message_d_erreur{
+    height: 2em;
+}
+
+#header{
+    margin-bottom: 2%;
+    padding-top: 10px;
+}
+
+#header ul{
+    padding: 0;
+    margin: 0;
+}
+#header ul li{
+    vertical-align: middle;
+}

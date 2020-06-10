@@ -1,0 +1,35 @@
+#tableau_liste_categorie_d_alerte tbody tr:nth-child(odd) td {
+	background-color: #f4fbff;
+}
+		
+#tableau_liste_categorie_d_alerte tbody td {
+	text-align:center;
+	vertical-align:middle;
+	border: 0.05em solid #d8e7f0 !important;
+}
+		
+#tableau_liste_categorie_d_alerte tfoot th{
+	background-color: #508abb;
+	color: #FFFFFF;
+	border: 0.05em solid #679ac4 !important;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+
+#tableau_liste_categorie_d_alerte thead th {
+	background-color: #508abb;
+	color: #FFFFFF;
+	border: 0.05em solid #679ac4 !important;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+#tableau_liste_categorie_d_alerte{
+	padding-top: 1em;
+}
+
+
+.cadreTableau {
+	padding: 1% 15%;
+}
