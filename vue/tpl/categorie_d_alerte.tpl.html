@@ -5,11 +5,13 @@
 	</div>
 
 	<div>
-		<button>liste des alertes passées</button>
-	</div>
+		<button id = "bouton_liste_des_alertes_passées">liste des alertes passées</button>
+    </div>
+    
+    <button id ="ajouter_categorie_d_alerte">ajouter categorie d'alerte</button>
 
     <div class="cadreTableau">
-        <table  id="tableau_liste_exercice">
+        <table  id="tableau_liste_categorie_d_alerte">
             <thead>
                 <tr>
                     <th>Nom categorie d'alerte</th>
@@ -18,6 +20,29 @@
             </thead>
         </table>
     </div>
+
+
+    <div id="dialog_ajouter_categorie_d_alerte" class="dialog_modfier_datatable" >
+        <div id="div_nom_de_la_nouvelle_categorie_d_alerte" class="div_modifier_datatable">
+
+            <label for="nom_de_la_nouvelle_categorie_d_alerte"><b>Entrer le nom</b></label>
+									<div id="div_message_d_erreur_nom_de_la_nouvelle_categorie_d_alerte" class="div_message_d_erreur">
+										<p id="message_d_erreur_nom_de_la_nouvelle_categorie_d_alerte" class="message_d_erreur">Ceci est un message d'erreur liés à la saisie du nom de la nouvelle categorie d'alerte</p>
+									</div>
+							<input type="text" placeholder="Entrer le nom de la categorie" name="nom_de_la_categorie" required id="nom_de_la_nouvelle_categorie_d_alerte" class="fadeIn third" title="Entrer le nom de la nouvelle categorie">
+
+
+        </div> 
+
+    </div> 
+
+    <div id="dialog_erreur" class="dialog_erreur_class">
+        <div id="message">
+            <p>Erreur serveur</p>
+        </div>							
+    </div>
+
+
 
 </section>
 

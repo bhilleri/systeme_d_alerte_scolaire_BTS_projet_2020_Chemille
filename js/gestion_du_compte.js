@@ -395,8 +395,8 @@ function validation_modification_code_PIN(){
     if (resultat_verification.password && resultat_verification.code_PIN)
     {
         let infos = {
-            password : $("#password").val(),
-            nouveau_code_PIN : $("#PIN_1").val(),
+            password : champs_modifier_code_PIN.password.get_input(),
+            nouveau_code_PIN : champs_modifier_code_PIN.code1.get_input(),
         };
         //la requète est envoyé et on attend une réponse pour savoir si le mot de passe a bien été changé
         $.ajax({

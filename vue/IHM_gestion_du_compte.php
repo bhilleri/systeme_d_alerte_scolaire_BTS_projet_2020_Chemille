@@ -19,7 +19,7 @@ class IHM_gestion_du_compte
 
 	public function generer_login($title)
 	{
-		$fichiers_CSS = array("css/main.css", "css/gestion_du_compte.css", "css/jquery-ui.structure.min.css", "css/jquery-ui.theme.min.css");
+		$fichiers_CSS = array("css/gestion_du_compte.css", "css/jquery-ui.structure.min.css", "css/jquery-ui.theme.min.css");
 		
 		$fichiers_JS = array( "js/jquery-ui.min.js");
 

@@ -16,7 +16,7 @@ class IHM_exercice
  			
 	public function generer_liste_exercice($title)
 	{
-        $fichiers_CSS = array("css\main.css","css\datatables.min.css","css\liste_exercice.css");
+        $fichiers_CSS = array("css\datatables.min.css","css\liste_exercice.css");
         $fichiers_JS = array("js\jquery.dataTables.min.js","js\liste_exercice.js");
         
 		$entete = new IHM_entete();

@@ -92,6 +92,7 @@ class Controleur
 				break;
 
 				case "categorie_d_alerte":
+					
 					$sous_controleur = new Sous_controleur_categorie_d_alerte($this->parametres);
 					$sous_controleur->dispatcheur();
 				break;

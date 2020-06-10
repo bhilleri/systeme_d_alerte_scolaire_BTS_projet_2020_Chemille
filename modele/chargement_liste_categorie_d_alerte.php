@@ -61,7 +61,7 @@ class Chargement_liste_categorie_d_alerte extends BDD{
 			$ligneParPage = $totalEnregistrement;
 		
 		## Récupérartion des données
-		$requete = $this->bdd->prepare("SELECT nomExercice,DATE_FORMAT(dateHeureExercice,'%d/%m/%Y') as dateExercice,TIME(dateHeureExercice) as heureExercice,typeExercice,infoExercice FROM exercice WHERE nomExercice LIKE :valeur
+		$requete = $this->bdd->prepare("SELECT nomAlerte, couleurAlerte FROM alerte WHERE nomAlerte LIKE :valeur
 		ORDER BY ".$nomColonne." ".$ordreTriColonne." LIMIT :debut,:offset");
 		$requete->bindValue(':valeur', "%$valeurRecherchee%");
 		$requete->bindValue(':debut', $ligne, PDO::PARAM_INT);
@@ -75,8 +75,8 @@ class Chargement_liste_categorie_d_alerte extends BDD{
 
 	foreach($resultatRecherche as $ligne){
 	   $data[] = array(
-		  "nomAlerte"=>$ligne['nom_alerte'],
-           "couleurAlerte"=>$ligne['couleur_alerte']
+		  "nomAlerte"=>$ligne['nomAlerte'],
+           "couleurAlerte"=>$ligne['couleurAlerte']
            
 	   );
 	}

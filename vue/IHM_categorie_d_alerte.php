@@ -19,13 +19,13 @@ class IHM_categorie_d_alerte
 
 	public function generer_categorie_d_alerte($title)
 	{
-		$fichiers_CSS = array("css/main.css", "css\datatables.min.css");
+		$fichiers_CSS = array("css/datatables.min.css", "css/liste_categorie_d_alerte.css", "css/jquery-ui.structure.min.css", "css/jquery-ui.theme.min.css");
 		
-		$fichiers_JS = array("js\jquery.dataTables.min.js");
+		$fichiers_JS = array("js/jquery-ui.min.js","js/jquery.dataTables.min.js", "js/categorie_d_alerte/categorie_d_alerte.js");
 
 		$entete = new IHM_entete();
 
-		$entete->generer_entete($title, $fichiers_CSS);
+		$entete->generer_entete($title, $fichiers_CSS, $fichiers_JS);
 
 		$menu = new IHM_menu();
 

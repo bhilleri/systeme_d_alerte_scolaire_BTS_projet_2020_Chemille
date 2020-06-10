@@ -19,7 +19,7 @@ class IHM_modifier_code_PIN
 
 	public function generer_modifier_code_PIN($title)
 	{
-		$fichiers_CSS = array("css/main.css", "css/modifier_code_PIN.css");
+		$fichiers_CSS = array("css/modifier_code_PIN.css");
 		
 		$fichiers_JS = array("modifier_code_PIN.js");
 

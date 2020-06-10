@@ -1,7 +1,7 @@
 <?php
 require_once "vue/IHM_categorie_d_alerte.php";
-require_once "modele/Code_PIN.php";
-require_once "modele/mot_de_passe.php";
+require_once "modele/chargement_liste_categorie_d_alerte.php";
+
 
 
 class Sous_controleur_categorie_d_alerte
@@ -18,7 +18,6 @@ class Sous_controleur_categorie_d_alerte
  			
 	public function dispatcheur()
 	{
-       
 
 		switch ($this->parametres['option'])
 			{		
@@ -30,6 +29,10 @@ class Sous_controleur_categorie_d_alerte
 				break;
 
 				case "chargement_liste_categorie_d_alerte" :
+					$action = new Chargement_liste_categorie_d_alerte();
+					
+					$action->chargement_liste($this->parametres);
+				break;
 					
 
 			}

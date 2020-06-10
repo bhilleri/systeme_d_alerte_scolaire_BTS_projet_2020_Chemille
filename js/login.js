@@ -6,7 +6,6 @@ import {gestion_champs_input} from "./gestion_champs_input.js";
 
 let infos;
 let resultat_connexion;
-let redirection = "ok";
 
 
 /*
